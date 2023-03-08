@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&family=Montserrat:wght@400;500;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+*,*::before,*::after{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --primary-red:hsl(0, 100%, 74%);
+    --primary-green-active:hsl(154, 59%, 51%);
+    --primary-green:hsl(154, 59%, 40%);
+    --accent-blue:hsl(248, 32%, 49%);
+    --neutral-dark-blue:hsl(249, 10%, 26%);
+    --neutral-grayish-blue:hsl(246, 25%, 77%);
+}
+
+body{
+    font-family:"Poppins",Arial, Helvetica, sans-serif;
+    min-height:100vh;
+    padding:1.5em;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:var(--primary-red);
+    background-image:url('images/bg-intro-mobile.png');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.container{
+    text-align:center;
+}
+
+.info-about-website h1{
+    color:white;
+    line-height:2.5rem;
+    margin-bottom:2rem;
+}
+
+.info-about-website p{
+    color:white;
+    margin-bottom:3.5rem;
+}
+
+.free-trail{
+    background-color:var(--accent-blue);
+    color:white;
+    padding:1.5em 3em;
+    margin-bottom:1.5rem;
+    border-radius:10px;
+    box-shadow: 0 9px hsla(0, 0%, 0%, 0.3);
+}
+
+.free-trail strong{
+    font-weight:600;
+}
+
+.form{
+    background-color:white;
+    padding:1.5em;
+    border-radius:10px;
+}
+
+.form input{
+    width:100%;
+    padding:1.2em 1.5em;
+    margin-bottom:1rem;
+    font-family:'Poppins',Arial, Helvetica, sans-serif;
+    font-size:1rem;
+    font-weight:700;
+    border-radius:5px;
+    border:1px solid var(--neutral-grayish-blue);
+    outline:none;
+}
+
+/* .form input::placeholder{
+   font-size:1rem;
+   font-weight:700;
+} */
+
+.form input:focus{
+    border:2px solid var(--accent-blue);
+}
+
+.form .cta{
+    width:100%;
+    margin-bottom:1rem;
+    color:white;
+    text-transform:uppercase;
+    font-family:'Poppins',Arial, Helvetica, sans-serif;
+    font-size:1.1rem;
+    font-weight:600;
+    padding:.8em 0;
+    border-radius:5px;
+    border:none;
+    background-color:var(--primary-green);
+    box-shadow: 0 5px hsl(154, 59%, 30%);
+}
+
+.form p {
+    color:var(--neutral-grayish-blue);
+    line-height:1.5rem;
+    font-size:.8rem;
+}
+
+.form p a{
+    color:var(--primary-red);
+    font-weight:700;
+    text-decoration:none;
+}
+
+@media (min-width:43.75em){
+    
+    body{
+        background-image: url('images/bg-intro-desktop.png');    
+        padding:0;
+    }
+
+    .container{
+        display:flex;
+        gap:2rem;
+        align-items:center;
+        width:90%;
+        max-width:1100px;
+    }
+
+    .sign-up, .info-about-website{
+        flex:1;
+    }
+
+    .info-about-website{
+        text-align:left;
+    }
+
+    .info-about-website h1{
+        font-size:3rem;
+        line-height:3.5rem;
+    }
+}
