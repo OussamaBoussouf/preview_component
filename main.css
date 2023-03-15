@@ -8,7 +8,7 @@
 
 :root{
     --primary-red:hsl(0, 100%, 74%);
-    --primary-green-active:hsl(154, 59%, 51%);
+    --primary-green-active:hsl(154, 59%, 60%);
     --primary-green:hsl(154, 59%, 40%);
     --accent-blue:hsl(248, 32%, 49%);
     --neutral-dark-blue:hsl(249, 10%, 26%);
@@ -29,10 +29,6 @@ body{
     background-repeat:no-repeat;
 }
 
-.container{
-    text-align:center;
-}
-
 .info-about-website h1{
     color:white;
     line-height:2.5rem;
@@ -51,19 +47,20 @@ body{
     margin-bottom:1.5rem;
     border-radius:10px;
     box-shadow: 0 9px hsla(0, 0%, 0%, 0.3);
+    text-align:center;
 }
 
 .free-trail strong{
     font-weight:600;
 }
 
-.form{
+.form-container{
     background-color:white;
     padding:1.5em;
     border-radius:10px;
 }
 
-.form input{
+.form-container input{
     width:100%;
     padding:1.2em 1.5em;
     margin-bottom:1rem;
@@ -75,16 +72,11 @@ body{
     outline:none;
 }
 
-/* .form input::placeholder{
-   font-size:1rem;
-   font-weight:700;
-} */
-
-.form input:focus{
+.form-container input:focus{
     border:2px solid var(--accent-blue);
 }
 
-.form .cta{
+.form-container .cta{
     width:100%;
     margin-bottom:1rem;
     color:white;
@@ -97,25 +89,59 @@ body{
     border:none;
     background-color:var(--primary-green);
     box-shadow: 0 5px hsl(154, 59%, 30%);
+    cursor:pointer;
 }
 
-.form p {
+.form-container .cta:hover{
+    background-color:var(--primary-green-active);
+    box-shadow: 0 5px hsl(154, 59%, 50%);
+}
+
+.form-container p {
     color:var(--neutral-grayish-blue);
     line-height:1.5rem;
     font-size:.8rem;
+    text-align:center;
 }
 
-.form p a{
+.form-container p a{
     color:var(--primary-red);
     font-weight:700;
     text-decoration:none;
 }
 
+.form-container div{
+    position:relative;
+}
+
+/*------------- Error State ------------*/
+.form-container div[data-error]::after{
+    content:url('/images/icon-error.svg');
+    position:absolute;
+    top:1.2em;
+    right:1.5em;
+}
+
+
+.form-container .error {
+    text-align: right;
+    font-style: italic;
+    font-size:.7rem;
+    margin-bottom:1.5rem;
+    color:var(--primary-red);
+}
+
+.form-container div[data-error] input{
+    color:var(--primary-red);
+    border:2px solid var(--primary-red);
+}
+
+/*--------------------------------------*/
+
 @media (min-width:43.75em){
     
     body{
         background-image: url('images/bg-intro-desktop.png');    
-        padding:0;
     }
 
     .container{
