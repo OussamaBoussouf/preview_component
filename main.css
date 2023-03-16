@@ -29,13 +29,13 @@ body{
     background-repeat:no-repeat;
 }
 
-.info-about-website h1{
+.website-info h1{
     color:white;
     line-height:2.5rem;
     margin-bottom:2rem;
 }
 
-.info-about-website p{
+.website-info p{
     color:white;
     margin-bottom:3.5rem;
 }
@@ -152,15 +152,15 @@ body{
         max-width:1100px;
     }
 
-    .sign-up, .info-about-website{
+    .sign-up, .website-info{
         flex:1;
     }
 
-    .info-about-website{
+    .website-info{
         text-align:left;
     }
 
-    .info-about-website h1{
+    .website-info h1{
         font-size:3rem;
         line-height:3.5rem;
     }
